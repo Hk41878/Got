@@ -1,7 +1,7 @@
 // Episodes Data with Links
 const episodes = {
   S01: [
-    { title: "Winter Is Coming", link: "http://got-s01-e01" },
+    { title: "Winter Is Coming", link: "vlc://https://device-local-9e7f3dc5-7a69-44a2-9672-b444b60548a0.remotewd.com:4430/sdk/v2/files/mksoaae4wh3rwd53mbliy2hv/content?download=true&access_token=eyJraWQiOiJNOHNrM1VSdnZHMnhKZ3FkZDdYdGhWZnhyQVptdmVvMyIsImFsZyI6IlJTMjU2In0.eyJqdGkiOiJKV1QiLCJhdWQiOiJrZXlzdG9uZSIsImlzcyI6Im0ybS10b2tlbi1zZXJ2aWNlIiwic3ViIjoicHVibGljX3NoYXJlIiwic2NvcGVzIjoibmFzX3JlYWRfb25seSBuYXNfcmVhZF93cml0ZSIsImN1c3RvbUNsYWltcyI6eyJkZXZpY2VJZCI6IjllN2YzZGM1LTdhNjktNDRhMi05NjcyLWI0NDRiNjA1NDhhMCIsImF1dGhfaWQiOiJhYjkzYTVmZC1hYjMzLTRiMDgtOTVkNC1iMGU5ZjI3MjU1OGIifSwiZXhwIjoxNzM0ODEzMzM4fQ.UnW_tvUB_fuVuwud-tLmWi6JemDOpL6orPEvrzjhFbf43gNXiy9x5QDa3cGnDy5F_t4cGYQrZz95o2Qg6_pAp0WRESxWOL_ob2Rof8FuFM2hHtFw4IQFnzO3f9tp0B_I9bRnQ4F_NkmFspIcRmkdFi_v1D3n8_uweKKcUhg7a2i-SVt_OSX3E3AoXnLcrnD5wjoacPqkrDdH1rwth9sSr2TZKEySeLIeJRntl21jVoN3UkSFyRzjKYbAIdVE8sOLfCB36PPfKWIQoQXbj29l1FbflzhcvbnrWVA-qSMN3W6aAhI809QDdz-yEEZdXI5R8jKj5QdTVfcYlyijdUgcvw" },
     { title: "The Kingsroad", link: "http://got-s01-e02" },
     { title: "Lord Snow", link: "http://got-s01-e03" },
     { title: "Cripples, Bastards, and Broken Things", link: "http://got-s01-e04" },
