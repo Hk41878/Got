@@ -48,6 +48,47 @@ const episodes = {
     { title: "The Watchers on the Wall", link: "http://got-s04-e09" },
     { title: "The Children", link: "http://got-s04-e10" }
   ],
+  S05: [
+    { title: "The Wars to Come", link: "http://got-s05-e01" },
+    { title: "The House of Black and White", link: "http://got-s05-e02" },
+    { title: "High Sparrow", link: "http://got-s05-e03" },
+    { title: "Sons of the Harpy", link: "http://got-s05-e04" },
+    { title: "Kill the Boy", link: "http://got-s05-e05" },
+    { title: "Unbowed, Unbent, Unbroken", link: "http://got-s05-e06" },
+    { title: "The Gift", link: "http://got-s05-e07" },
+    { title: "Hardhome", link: "http://got-s05-e08" },
+    { title: "The Dance of Dragons", link: "http://got-s05-e09" },
+    { title: "Mother's Mercy", link: "http://got-s05-e10" }
+  ],
+  S06: [
+    { title: "The Red Woman", link: "http://got-s06-e01" },
+    { title: "Home", link: "http://got-s06-e02" },
+    { title: "Oathbreaker", link: "http://got-s06-e03" },
+    { title: "Book of the Stranger", link: "http://got-s06-e04" },
+    { title: "The Door", link: "http://got-s06-e05" },
+    { title: "Blood of My Blood", link: "http://got-s06-e06" },
+    { title: "The Broken Man", link: "http://got-s06-e07" },
+    { title: "No One", link: "http://got-s06-e08" },
+    { title: "Battle of the Bastards", link: "http://got-s06-e09" },
+    { title: "The Winds of Winter", link: "http://got-s06-e10" }
+  ],
+  S07: [
+    { title: "Dragonstone", link: "http://got-s07-e01" },
+    { title: "Stormborn", link: "http://got-s07-e02" },
+    { title: "The Queen's Justice", link: "http://got-s07-e03" },
+    { title: "The Spoils of War", link: "http://got-s07-e04" },
+    { title: "Eastwatch", link: "http://got-s07-e05" },
+    { title: "Beyond the Wall", link: "http://got-s07-e06" },
+    { title: "The Dragon and the Wolf", link: "http://got-s07-e07" }
+  ],
+  S08: [
+    { title: "Winterfell", link: "http://got-s08-e01" },
+    { title: "A Knight of the Seven Kingdoms", link: "http://got-s08-e02" },
+    { title: "The Long Night", link: "http://got-s08-e03" },
+    { title: "The Last of the Starks", link: "http://got-s08-e04" },
+    { title: "The Bells", link: "http://got-s08-e05" },
+    { title: "The Iron Throne", link: "http://got-s08-e06" }
+  ]
   // Add other seasons following this pattern...
 };
 
