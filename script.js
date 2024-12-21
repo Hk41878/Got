@@ -107,6 +107,6 @@ function loadEpisodes(season) {
       card.classList.add("episode-card");
 
       card.innerHTML = `
-        <img src="https://via.placeholder.com/200x120?text=Game+of+Thrones" alt="Episode Image">
+        <img src="IMG_0722.png" alt="Episode Image">
         <h3>Episode ${index + 1}: ${title}</h3>
         <a href="#" class 
