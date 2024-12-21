@@ -93,55 +93,37 @@ const episodes = {
 
 // Select Elements
 const seasonSelect = document.getElementById("season");
-const episodeSelect = document.getElementById("episode");
-const episodeDetailsDiv = document.getElementById("episode-details");
+const episodesDiv = document.getElementById("episodes");
 
 // Load Episodes for Selected Season
 function loadEpisodes(season) {
-  // Clear previous episode selection and details
-  episodeSelect.innerHTML = "";
-  episodeDetailsDiv.innerHTML = "";
+  episodesDiv.innerHTML = ""; // Clear previous episodes
 
   const seasonEpisodes = episodes[season];
 
   if (seasonEpisodes) {
-    // Add options for episodes dynamically
+    // Display all episodes for the selected season
     seasonEpisodes.forEach((title, index) => {
-      const option = document.createElement("option");
-      option.value = index;
-      option.textContent = `Episode ${index + 1}: ${title}`;
-      episodeSelect.appendChild(option);
+      // Create Episode Card
+      const card = document.createElement("div");
+      card.classList.add("episode-card");
+
+      card.innerHTML = `
+        <img src="IMG_0722.png" alt="Episode Image">
+        <h3>Episode ${index + 1}: ${title}</h3>
+        <a href="#" class="play-btn">Play</a>
+      `;
+      
+      // Add the card to the episodes container
+      episodesDiv.appendChild(card);
     });
-
-    // Load the first episode by default
-    loadEpisodeDetails(season, 0);
   }
-}
-
-// Load Episode Details
-function loadEpisodeDetails(season, episodeIndex) {
-  const title = episodes[season][episodeIndex];
-  episodeDetailsDiv.innerHTML = `
-    <div class="episode-card">
-      <img src="IMG_0722.png" alt="Episode Image">
-      <h3>${title}</h3>
-      <a href="#" class="play-btn">Play</a>
-    </div>
-  `;
 }
 
 // Event Listener for Season Selection
 seasonSelect.addEventListener("change", (e) => {
-  const season = e.target.value;
-  loadEpisodes(season);
+  loadEpisodes(e.target.value);
 });
 
-// Event Listener for Episode Selection
-episodeSelect.addEventListener("change", (e) => {
-  const episodeIndex = e.target.value;
-  const season = seasonSelect.value;
-  loadEpisodeDetails(season, episodeIndex);
-});
-
-// Initial Load - Default Season 1 and Episode 1
+// Initial Load - Default Season 1
 loadEpisodes("S01");
