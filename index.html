@@ -3,33 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Content Fetcher</title>
+    <title>Fetch HTML Content from Any Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Website Content Fetcher</h1>
-    <form method="post">
-        <label for="url">Enter Website URL:</label>
-        <input type="text" name="url" id="url" value="https://hk41878.github.io/Gottest/" required>
-        <button type="submit">Fetch Content</button>
-    </form>
 
-   <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['url'])) {
-    $url = filter_var($_POST['url'], FILTER_VALIDATE_URL);
-    if ($url) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0');
-        $html = curl_exec($ch);
-        curl_close($ch);
+<div class="container">
+    <h1>Fetch HTML Content from Any Website</h1>
+    <input type="text" id="urlInput" placeholder="Enter website URL (e.g., https://example.com)">
+    <button onclick="fetchContent()">Fetch Content</button>
+    <textarea id="content" readonly></textarea>
+</div>
 
-        echo '<h2>Fetched Content:</h2>';
-        echo '<textarea rows="20" cols="100">' . htmlspecialchars($html) . '</textarea>';
-    } else {
-        echo '<p style="color:red;">Invalid URL. Please enter a valid website URL.</p>';
+<script>
+    function fetchContent() {
+        // Get the URL from the input field
+        const url = document.getElementById('urlInput').value;
+        
+        // Check if the URL is empty or invalid
+        if (!url) {
+            alert("Please enter a valid URL.");
+            return;
+        }
+        
+        // Ensure the URL starts with http:// or https://
+        const validUrl = url.startsWith('http://') || url.startsWith('https://');
+        if (!validUrl) {
+            alert("Please enter a URL with 'http://' or 'https://'");
+            return;
+        }
+
+        // Use the Fetch API to get content from the entered URL
+        fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`)
+            .then(response => response.text())
+            .then(data => {
+                // Display the fetched content inside the textarea
+                document.getElementById('content').value = data;
+            })
+            .catch(error => {
+                console.error('Error fetching content:', error);
+                alert('Failed to fetch content from the provided URL.');
+            });
     }
-}
-?>
+</script>
+
 </body>
 </html>
