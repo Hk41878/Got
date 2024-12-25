@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game of Thrones</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Content Fetcher</title>
 </head>
 <body>
-  <header>
-    <h1>Game of Thrones</h1>
-  </header>
+    <h1>Website Content Fetcher</h1>
+    <form method="post">
+        <label for="url">Enter Website URL:</label>
+        <input type="text" name="url" id="url" placeholder="https://example.com" required>
+        <button type="submit">Fetch Content</button>
+    </form>
 
-  <main>
-    <div class="season-selector">
-      <label for="season">Select Season:</label>
-      <select id="season">
-        <option value="S01">Season 1</option>
-        <option value="S02">Season 2</option>
-        <option value="S03">Season 3</option>
-        <option value="S04">Season 4</option>
-        <option value="S05">Season 5</option>
-        <option value="S06">Season 6</option>
-        <option value="S07">Season 7</option>
-        <option value="S08">Season 8</option>
-      </select>
-    </div>
-
-    <div id="episodes" class="episodes">
-      <!-- Episodes will be dynamically loaded here -->
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2024 Game of Thrones</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['url'])) {
+        $url = filter_var($_POST['url'], FILTER_VALIDATE_URL);
+        if ($url) {
+            $html = file_get_contents($url);
+            echo '<h2>Fetched Content:</h2>';
+            echo '<textarea rows="20" cols="100">' . htmlspecialchars($html) . '</textarea>';
+        } else {
+            echo '<p style="color:red;">Invalid URL. Please enter a valid website URL.</p>';
+        }
+    }
+    ?>
 </body>
 </html>
