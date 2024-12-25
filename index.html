@@ -13,17 +13,23 @@
         <button type="submit">Fetch Content</button>
     </form>
 
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['url'])) {
-        $url = filter_var($_POST['url'], FILTER_VALIDATE_URL);
-        if ($url) {
-            $html = file_get_contents($url);
-            echo '<h2>Fetched Content:</h2>';
-            echo '<textarea rows="20" cols="100">' . htmlspecialchars($html) . '</textarea>';
-        } else {
-            echo '<p style="color:red;">Invalid URL. Please enter a valid website URL.</p>';
-        }
+   <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['url'])) {
+    $url = filter_var($_POST['url'], FILTER_VALIDATE_URL);
+    if ($url) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0');
+        $html = curl_exec($ch);
+        curl_close($ch);
+
+        echo '<h2>Fetched Content:</h2>';
+        echo '<textarea rows="20" cols="100">' . htmlspecialchars($html) . '</textarea>';
+    } else {
+        echo '<p style="color:red;">Invalid URL. Please enter a valid website URL.</p>';
     }
-    ?>
+}
+?>
 </body>
 </html>
