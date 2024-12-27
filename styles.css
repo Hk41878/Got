@@ -76,7 +76,7 @@ main {
   display: inline-block;
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
-  background: #ffcc00;
+  background: #ff6600;
   color: #000;
   text-decoration: none;
   border-radius: 5px;
@@ -85,7 +85,7 @@ main {
 }
 
 .load-btn {
-  background-color: #ff6600; /* Different color for load button */
+  background-color: #ffcc00; /* Different color for load button */
 }
 
 .load-btn:hover, .play-btn:hover {
