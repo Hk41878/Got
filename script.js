@@ -1,15 +1,15 @@
 const episodes = {
   S01: [
     { title: "Winter Is Coming", link: "https://home.mycloud.com/action/share/f9b47750-83da-4cd6-82f1-d0d528461b9a" },
-    { title: "The Kingsroad", link: "https://home.mycloud.com/action/share/773f1c24-1037-4b48-8b18-e43d9c6e85de" },
-    { title: "Lord Snow", link: "http://got-s01-e03" },
-    { title: "Cripples, Bastards, and Broken Things", link: "http://got-s01-e04" },
-    { title: "The Wolf and the Lion", link: "http://got-s01-e05" },
-    { title: "A Golden Crown", link: "http://got-s01-e06" },
-    { title: "You Win or You Die", link: "http://got-s01-e07" },
-    { title: "The Pointy End", link: "http://got-s01-e08" },
-    { title: "Baelor", link: "http://got-s01-e09" },
-    { title: "Fire and Blood", link: "http://got-s01-e10" }
+    { title: "The Kingsroad", link: "https://home.mycloud.com/action/share/1daaa8a9-e82f-4126-bd76-9503df270f4d" },
+    { title: "Lord Snow", link: "https://home.mycloud.com/action/share/46c04a7d-9878-4838-8866-18796a0a8167" },
+    { title: "Cripples, Bastards, and Broken Things", link: "https://home.mycloud.com/action/share/27a6ba02-7258-4b34-b35c-739f8511f767" },
+    { title: "The Wolf and the Lion", link: "https://home.mycloud.com/action/share/6c4b3b23-b84b-465b-a3e8-e3d25fedb639" },
+    { title: "A Golden Crown", link: "https://home.mycloud.com/action/share/f630c1bd-5f01-44a8-ac1a-21b0f6ad0f9d" },
+    { title: "You Win or You Die", link: "https://home.mycloud.com/action/share/29e491bf-a4c1-43a0-9813-3283ec4520a3" },
+    { title: "The Pointy End", link: "https://home.mycloud.com/action/share/b9ccec7d-76cb-4165-ae58-32a03febdc7c" },
+    { title: "Baelor", link: "https://home.mycloud.com/action/share/b6a5c7e4-b808-41ba-a698-f28b05f62e72" },
+    { title: "Fire and Blood", link: "https://home.mycloud.com/action/share/a8cabcf3-a2ca-46d1-b56d-45fe92db0235" }
   ]
 };
 
