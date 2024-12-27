@@ -38,7 +38,7 @@ function loadEpisodes(season) {
       const lastPlayed = localStorage.getItem('lastPlayedEpisode');
       if (lastPlayed === episode.title) {
         const button = card.querySelector('button');
-        button.style.backgroundColor = 'purple'; // Change background to purple
+        button.style.backgroundColor = '#f5630f'; // Change background to purple
         button.innerHTML = 'Last Played'; // Optionally change the text
       }
 
