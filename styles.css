@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+header {
+  text-align: center;
+  padding: 1rem 0;
+  background: #000;
+  color: #ffcc00;
+}
+
+main {
+  padding: 1rem;
+}
+
+/* Season Selector */
+.season-selector {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.season-selector label {
+  font-size: 1.2rem;
+}
+
+.season-selector select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  background: #333;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Episodes Section */
+.episodes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.episode-card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.episode-card:hover {
+  transform: scale(1.05);
+}
+
+.episode-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.episode-card h3 {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+/* Load/Play Button */
+.load-btn, .play-btn {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.load-btn {
+  background-color: #ff6600; /* Different color for load button */
+}
+
+.load-btn:hover, .play-btn:hover {
+  background-color: #e6b800;
+}
+
+.play-btn {
+  background-color: #4caf50; /* Different color for play button */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #000;
+  color: #666;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .episodes {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .episode-card {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+}
