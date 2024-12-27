@@ -72,7 +72,7 @@ function fetchContentAndOpen(button) {
 
   // Change the clicked button background to purple and text to "Last Played"
   button.style.backgroundColor = '#4caf50';
-  button.innerHTML = 'Last Played';
+  button.innerHTML = 'Wait...';
   
   // Store the last played episode title in localStorage
   localStorage.setItem('lastPlayedEpisode', button.getAttribute("data-title"));
