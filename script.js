@@ -29,7 +29,7 @@ function loadEpisodes(season) {
       card.classList.add("episode-card");
 
       card.innerHTML = `
-        <img src="thumbnail.jpg" alt="Episode Image">
+        <img src="thumbnail.png" alt="Episode Image">
         <h3>Episode ${index + 1}: ${episode.title}</h3>
         <button class="load-btn" data-url="${episode.link}" data-title="${episode.title}" onclick="fetchContentAndOpen(this)">Load</button>
       `;
